@@ -36,11 +36,13 @@ jobs:
           ssh ${{ env.VPS_USERNAME }}@$VPS_HOST << 'EOF'
             docker pull ${{ env.DOCKER_IMAGE }}
 
-            docker stop ${{ env.CONTAINER_NAME }} || true
-            docker rm ${{ env.CONTAINER_NAME }} || true
+            # Stop and remove any running container using port 3000
+            docker stop portfolio-container || true
+            docker rm portfolio-container || true
 
+            # Run new container
             docker run -d \
-              --name ${{ env.CONTAINER_NAME }} \
+              --name portfolio-container \
               -p 3000:3000 \
               --restart unless-stopped \
               ${{ env.DOCKER_IMAGE }}

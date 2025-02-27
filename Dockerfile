@@ -21,6 +21,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/next.config.ts ./next.config.ts
 
+RUN npm pkg delete scripts.prepare && npm install --omit=dev
 
 RUN npm install --production
 
