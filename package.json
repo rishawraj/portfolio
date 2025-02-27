@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "test:vitest":"vitest --run",
-    "test:watch":"vitest"
+    "test:vitest": "vitest --run",
+    "test:watch": "vitest"
   },
   "dependencies": {
+    "framer-motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
