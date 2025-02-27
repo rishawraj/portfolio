@@ -66,7 +66,7 @@ const PortfolioPage = () => {
             className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
           >
             <Image
-              src="/placeholder.png" //eplace with your image
+              src="/placeholder.png" //replace with your image
               alt="Project 1"
               width={600}
               height={400}
@@ -133,7 +133,9 @@ const PortfolioPage = () => {
       </section>
 
       <footer className="py-8 text-center text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} rishawraj . All rights reserved.
+        </p>
       </footer>
     </motion.div>
   );
