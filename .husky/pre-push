@@ -1,1 +1,8 @@
-npm run build
+#!/bin/sh
+
+./scripts/docker-deploy.sh
+
+if[$? -ne 0]; then
+    echo "Deployment script failed, Aborting push."
+    exit 1
+fi

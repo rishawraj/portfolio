@@ -1,9 +1,8 @@
-import PortfolioPage from "./_components/PortfolioPage";
-
+import Home from "./_components/HomePage";
 const HomePage = () => {
   return (
     <>
-      <PortfolioPage />
+      <Home />
     </>
   );
 };
