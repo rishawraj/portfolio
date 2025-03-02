@@ -1,8 +1,13 @@
 #!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-./scripts/docker-deploy.sh
+echo "🔨 Building Nextjs Project..."
+npm run build
 
-if[$? -ne 0]; then
-    echo "Deployment script failed, Aborting push."
-    exit 1
-fi
+echo "🐳 Building Docker image..."
+docker build -t rishawraj/portfolio:latest .
+
+echo "🚀 Pushing Docker image to registry..."
+docker push rishawraj/portfolio:latest
+
+echo "✅ Docker image built and pushed successfully!"

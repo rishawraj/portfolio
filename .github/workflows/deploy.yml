@@ -29,11 +29,12 @@ jobs:
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+          VPS_SSH_PORT: ${{ secrets.VPS_SSH_PORT }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_IMAGE: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
           CONTAINER_NAME: portfolio-container
         run: |
-          ssh ${{ env.VPS_USERNAME }}@$VPS_HOST << 'EOF'
+          ssh -p ${{env.VPS_SSH_PORT}} ${{ env.VPS_USERNAME }}@$VPS_HOST << 'EOF'
             docker pull ${{ env.DOCKER_IMAGE }}
 
             # Stop and remove any running container using port 3000

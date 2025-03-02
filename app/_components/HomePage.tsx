@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -113,7 +112,8 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-xl font-bold"
           >
-            Rishaw<span className="text-blue-600 dark:text-blue-400">.dev</span>
+            rishawraj
+            <span className="text-blue-600 dark:text-blue-400">.site</span>
           </motion.div>
           <nav>
             <ul className="flex space-x-8">
@@ -205,7 +205,7 @@ export default function Home() {
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                Hi, I`m{" "}
+                Hi, I&apos;m{" "}
                 <span className="text-blue-600 dark:text-blue-400">
                   Rishaw Raj
                 </span>
@@ -286,18 +286,18 @@ export default function Home() {
 
                 <div className="w-full md:w-2/3">
                   <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-                    I`m a passionate full-stack web developer with expertise in
-                    building scalable, robust, and user-friendly web
-                    applications. With a strong foundation in both frontend and
-                    backend technologies, I specialize in creating seamless
+                    I&apos;m a passionate full-stack web developer with
+                    expertise in building scalable, robust, and user-friendly
+                    web applications. With a strong foundation in both frontend
+                    and backend technologies, I specialize in creating seamless
                     digital experiences that combine elegant design with
                     powerful functionality.
                   </p>
                   <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
                     My journey in web development began 5 years ago, and since
-                    then, I`ve worked on a diverse range of projects from
+                    then, I&apos;ve worked on a diverse range of projects from
                     e-commerce platforms to content management systems and
-                    real-time applications. I`m constantly exploring new
+                    real-time applications. I&apos;m constantly exploring new
                     technologies and methodologies to enhance my skills and
                     deliver exceptional solutions.
                   </p>
@@ -696,8 +696,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <div className="text-xl font-bold">
-                Rishaw
-                <span className="text-blue-600 dark:text-blue-400">.dev</span>
+                rishawraj
+                <span className="text-blue-600 dark:text-blue-400">.site</span>
               </div>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                 © {new Date().getFullYear()} Rishaw Raj. All rights reserved.
